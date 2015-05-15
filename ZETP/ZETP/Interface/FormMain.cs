@@ -22,17 +22,36 @@ namespace ZETP.Interface
         #region "Events"
         private void FormMain_Load(object sender, EventArgs e)
         {
-            
+            WriteOutputConsole("Application opened");
         }
-
         private void TsMainBtnOpenFile_Click(object sender, EventArgs e)
         {
            ReadFile(OpenFile());
+
+           if (DgvConstructors.RowCount != 0)
+               BtnCreateObject.Enabled = true;
         }
 
         private void TsMainBtnCloseFile_Click(object sender, EventArgs e)
         {
             DesactivateMainForm();
+        }
+
+        private void BtnCreateObject_Click(object sender, EventArgs e)
+        {
+            //TODO: Call the selected constructor...
+
+            WriteOutputConsole("Object Created");
+
+            if (DgvMethods.RowCount != 0)
+                BtnCallMethod.Enabled = true;
+        }
+
+        private void BtnCallMethod_Click(object sender, EventArgs e)
+        {
+            //TODO: Call the selected method...
+
+            WriteOutputConsole("Method Called");
         }
         #endregion
 
@@ -45,9 +64,8 @@ namespace ZETP.Interface
         {
             Stream stream = null;
 
-            OfdMain.InitialDirectory = "c:\\";
+            OfdMain.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             OfdMain.Filter = "class files (*.cs)|*.cs";
-            OfdMain.FilterIndex = 2;
             OfdMain.RestoreDirectory = true;
 
             if (OfdMain.ShowDialog() == DialogResult.OK)
@@ -69,13 +87,26 @@ namespace ZETP.Interface
             return stream;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="stream"> .cs file stream </param>
         private void ReadFile(Stream stream)
         {
-            //******* To Complete... (si le fichier est invalide, recoit un stream null) ********
+            //TODO: Read the file (receive a null stream if the file is invalid)
             if (stream != null)
             {
                 
             }
+        }
+
+        /// <summary>
+        /// Display a message in the output console.
+        /// </summary>
+        /// <param name="p"> string to display in the output console </param>
+        private void WriteOutputConsole(string p)
+        {
+            TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
         }
 
         /// <summary>
@@ -88,6 +119,8 @@ namespace ZETP.Interface
             TsMainBtnOpenFile.Enabled = false;
             DgvConstructors.BackgroundColor = Color.White;
             DgvMethods.BackgroundColor = Color.White;
+
+            WriteOutputConsole("Class file opened");
         }
 
         /// <summary>
@@ -96,10 +129,15 @@ namespace ZETP.Interface
         private void DesactivateMainForm()
         {
             TbxSelectedFile.Text = "No selected file";
+            TbxClassName.Text = String.Empty;
             TsMainBtnCloseFile.Enabled = false;
             TsMainBtnOpenFile.Enabled = true;
             DgvConstructors.BackgroundColor = Color.LightGray;
             DgvMethods.BackgroundColor = Color.LightGray;
+            BtnCreateObject.Enabled = false;
+            BtnCallMethod.Enabled = false;
+                
+            WriteOutputConsole("Class file closed");
         }
         #endregion       
     }
