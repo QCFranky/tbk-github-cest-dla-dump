@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ZETP.Properties {
+namespace ZETP {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ZETP.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ZETP.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ZETP.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,16 +66,6 @@ namespace ZETP.Properties {
         internal static System.Drawing.Bitmap _1431670061_Open {
             get {
                 object obj = ResourceManager.GetObject("_1431670061_Open", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1431671305_Close {
-            get {
-                object obj = ResourceManager.GetObject("_1431671305_Close", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
