@@ -38,15 +38,15 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LblOutpout = new System.Windows.Forms.Label();
             this.DgvMethods = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.LblClassName = new System.Windows.Forms.Label();
             this.TbxClassName = new System.Windows.Forms.Label();
             this.DgvConstructors = new System.Windows.Forms.DataGridView();
             this.TbxOutpoutConsole = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnCreateObject = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.BtnCallMethod = new System.Windows.Forms.Button();
             this.TsMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -173,30 +173,6 @@
             this.DgvMethods.Size = new System.Drawing.Size(697, 174);
             this.DgvMethods.TabIndex = 7;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(21, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Methods:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Constructors:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // LblClassName
             // 
             this.LblClassName.AutoSize = true;
@@ -263,6 +239,18 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(75, 180);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Constructors:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // BtnCreateObject
             // 
             this.BtnCreateObject.Enabled = false;
@@ -286,6 +274,18 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(75, 181);
             this.flowLayoutPanel2.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(21, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Methods:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // BtnCallMethod
             // 

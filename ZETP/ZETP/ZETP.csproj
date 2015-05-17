@@ -53,6 +53,8 @@
     <Compile Include="Interface\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\FormMainController.cs" />
+    <Compile Include="Interface\FormMainModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interface\FormMain.resx">

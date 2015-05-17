@@ -14,8 +14,11 @@ namespace ZETP.Interface
 {
     public partial class FormMain : Form
     {
+        private const FormMainModel model = new FormMainModel();
+        private FormMainController controller; 
         public FormMain()
         {
+            controller = new FormMainController(model);
             InitializeComponent();
         }
 
