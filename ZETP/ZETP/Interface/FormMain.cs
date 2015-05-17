@@ -19,6 +19,7 @@ namespace ZETP.Interface
         public FormMain()
         {
             controller = new FormMainController(model);
+            controller.getAllClass();
             InitializeComponent();
         }
 
