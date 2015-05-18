@@ -43,8 +43,9 @@ namespace ZETP.Interface
 
         private void BtnCreateObject_Click(object sender, EventArgs e)
         {
-            //TODO: Call the selected constructor...
-
+            //TODO: a verifier si la methode callMethode marche pour es constructeur aussi
+            //TODO: manque les parametres
+            //controller.callMethod()
             WriteOutputConsole("Object Created");
 
             if (DgvMethods.RowCount != 0)
@@ -53,8 +54,8 @@ namespace ZETP.Interface
 
         private void BtnCallMethod_Click(object sender, EventArgs e)
         {
-            //TODO: Call the selected method...
-
+            //TODO: manque les parametres
+            //controller.callMethod()
             WriteOutputConsole("Method Called");
         }
         #endregion

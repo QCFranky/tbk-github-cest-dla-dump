@@ -12,6 +12,7 @@ namespace ZETP.Interface
     class FormMainModel : INotifyPropertyChanged
     {
         private Assembly assembly;
+        private Type currentClass = null;
 
         private String className = "";
         private List<String> classMethods = new List<String>();
@@ -32,6 +33,21 @@ namespace ZETP.Interface
                 if (!value.Equals(this.assembly))
                 {
                     this.assembly = value;
+                }
+            }
+        }
+
+        public Type CURRENT_CLASS
+        {
+            get
+            {
+                return this.currentClass;
+            }
+            set
+            {
+                if (!value.Equals(this.currentClass))
+                {
+                    this.currentClass = value;
                 }
             }
         }
@@ -94,6 +110,19 @@ namespace ZETP.Interface
             if(!value.Equals(this.assembly))
             {
                 this.assembly = value;
+            }
+        }
+
+        public Type getCurrentClass()
+        {
+            return this.currentClass;
+        }
+
+        public void setCurrentClass(Type value)
+        {
+            if (!value.Equals(this.currentClass))
+            {
+                this.currentClass = value;
             }
         }
 
