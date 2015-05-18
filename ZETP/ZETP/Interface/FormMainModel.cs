@@ -26,7 +26,7 @@ namespace ZETP.Interface
         {
             get
             {
-                return this.ASSEMBLY;
+                return this.assembly;
             }
             set
             {
@@ -63,7 +63,7 @@ namespace ZETP.Interface
                 if (!value.Equals(this.className))
                 {
                     this.className = value;
-                    NotifyPropertyChanged("className");
+                    NotifyPropertyChanged("classNameChanged");
                 }
             }
         }
@@ -79,7 +79,7 @@ namespace ZETP.Interface
                 if (!value.Equals(this.classMethods))
                 {
                     this.classMethods = value;
-                    NotifyPropertyChanged("classMethods");
+                    NotifyPropertyChanged("classMethodsChanged");
                 }
             }
         }
@@ -95,7 +95,7 @@ namespace ZETP.Interface
                 if (!value.Equals(this.classConstructors))
                 {
                     this.classConstructors = value;
-                    NotifyPropertyChanged("classConstructors");
+                    NotifyPropertyChanged("classConstructorsChanged");
                 }
             }
         }
@@ -136,7 +136,7 @@ namespace ZETP.Interface
             if (!value.Equals(this.className))
             {
                 this.className = value;
-                NotifyPropertyChanged("className");
+                NotifyPropertyChanged("classNameChanged");
             }
         }
 
@@ -150,7 +150,7 @@ namespace ZETP.Interface
             if (!value.Equals(this.classMethods))
             {
                 this.classMethods = value;
-                NotifyPropertyChanged("classMethods");
+                NotifyPropertyChanged("classMethodsChanged");
             }
         }
 
@@ -164,7 +164,7 @@ namespace ZETP.Interface
             if (!value.Equals(this.classConstructors))
             {
                 this.classConstructors = value;
-                NotifyPropertyChanged("classConstructors");
+                NotifyPropertyChanged("classConstructorsChanged");
             }
         }
         

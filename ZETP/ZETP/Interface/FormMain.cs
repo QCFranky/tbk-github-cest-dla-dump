@@ -12,12 +12,13 @@ using System.Runtime.InteropServices;
 
 namespace ZETP.Interface
 {
-    public partial class FormMain : Form
+    partial class FormMain : Form
     {
-        private const FormMainModel model = new FormMainModel();
-        private FormMainController controller; 
+        private FormMainModel model;
+        private FormMainController controller;
         public FormMain()
         {
+            model = new FormMainModel();
             controller = new FormMainController(model);
             controller.getAllClass();
             InitializeComponent();
@@ -27,13 +28,17 @@ namespace ZETP.Interface
         private void FormMain_Load(object sender, EventArgs e)
         {
             WriteOutputConsole("Application opened");
+            //Only for test
+            foreach (Type aClass in model.ASSEMBLY.GetTypes())
+                if (aClass.IsClass && aClass.IsPublic && !aClass.IsAbstract)
+                    WriteOutputConsole(aClass.Name);
         }
         private void TsMainBtnOpenFile_Click(object sender, EventArgs e)
         {
-           ReadFile(OpenFile());
+            ReadFile(OpenFile());
 
-           if (DgvConstructors.RowCount != 0)
-               BtnCreateObject.Enabled = true;
+            if (DgvConstructors.RowCount != 0)
+                BtnCreateObject.Enabled = true;
         }
 
         private void TsMainBtnCloseFile_Click(object sender, EventArgs e)
@@ -43,20 +48,34 @@ namespace ZETP.Interface
 
         private void BtnCreateObject_Click(object sender, EventArgs e)
         {
-            //TODO: a verifier si la methode callMethode marche pour es constructeur aussi
-            //TODO: manque les parametres
-            //controller.callMethod()
-            WriteOutputConsole("Object Created");
+            try
+            {
+                //TODO: a verifier si la methode callMethode marche pour es constructeur aussi
+                //TODO: manque les parametres
+                //controller.callMethod()
+                WriteOutputConsole("Object Created");
 
-            if (DgvMethods.RowCount != 0)
-                BtnCallMethod.Enabled = true;
+                if (DgvMethods.RowCount != 0)
+                    BtnCallMethod.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                WriteOutputConsole(ex.Message);
+            }
         }
 
         private void BtnCallMethod_Click(object sender, EventArgs e)
         {
-            //TODO: manque les parametres
-            //controller.callMethod()
-            WriteOutputConsole("Method Called");
+            try
+            {   
+                //TODO: manque les parametres
+                //controller.callMethod()
+                WriteOutputConsole("Method Called");
+            }
+            catch (Exception ex)
+            {
+                WriteOutputConsole(ex.Message);
+            }
         }
         #endregion
 
@@ -101,7 +120,7 @@ namespace ZETP.Interface
             //TODO: Read the file (receive a null stream if the file is invalid)
             if (stream != null)
             {
-                
+
             }
         }
 
@@ -141,9 +160,9 @@ namespace ZETP.Interface
             DgvMethods.BackgroundColor = Color.LightGray;
             BtnCreateObject.Enabled = false;
             BtnCallMethod.Enabled = false;
-                
+
             WriteOutputConsole("Class file closed");
         }
-        #endregion       
+        #endregion
     }
 }
