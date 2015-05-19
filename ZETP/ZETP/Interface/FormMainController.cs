@@ -44,7 +44,7 @@ namespace ZETP.Interface
             return null;
         }
 
-        public void callConstructor(int index, Object[] param)
+        public Object callConstructor(int index, Object[] param)
         {
             Type aClass = model.CURRENT_CLASS;
             if (aClass == null)
@@ -63,6 +63,7 @@ namespace ZETP.Interface
                     result = aConstructor.Invoke(classInstance, null);
                 else
                     result = aConstructor.Invoke(aConstructor, param);
+                return result;
             }
             else
             {
@@ -70,7 +71,7 @@ namespace ZETP.Interface
             }
         }
 
-        public void callMethod(int index, Object[] param)
+        public Object callMethod(int index, Object[] param)
         {
             Type aClass = model.CURRENT_CLASS;
             if (aClass == null)
@@ -86,6 +87,7 @@ namespace ZETP.Interface
                     result = aMethod.Invoke(classInstance, null);
                 else
                     result = aMethod.Invoke(aMethod, param);
+                return result;
             }
             else
             {

@@ -52,7 +52,7 @@ namespace ZETP.Interface
             try
             {
                 //TODO: manque les parametres
-                controller.callConstructor(LbxConstructors.SelectedIndex, null);
+                WriteOutputConsole(controller.callConstructor(LbxConstructors.SelectedIndex, null)+"");
                 WriteOutputConsole("Object Created");
 
                 if (LbxMethods.Items.Count != 0)
@@ -69,7 +69,7 @@ namespace ZETP.Interface
             try
             {   
                 //TODO: manque les parametres
-                controller.callMethod(LbxMethods.SelectedIndex, null);
+                WriteOutputConsole(controller.callMethod(LbxMethods.SelectedIndex, null) + "");
                 WriteOutputConsole("Method Called");
             }
             catch (Exception ex)
