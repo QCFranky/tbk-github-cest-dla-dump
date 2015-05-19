@@ -51,12 +51,16 @@ namespace ZETP.Interface
         {
             try
             {
-                //TODO: manque les parametres
-                controller.callConstructor(LbxConstructors.SelectedIndex, null);
-                WriteOutputConsole("Object Created");
+                FormConstructorParameters zeForm = new FormConstructorParameters();
 
-                if (LbxMethods.Items.Count != 0)
-                    BtnCallMethod.Enabled = true;
+                if (zeForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    controller.callConstructor(LbxConstructors.SelectedIndex, null);
+                    WriteOutputConsole("Object Created");
+
+                    if (LbxMethods.Items.Count != 0)
+                        BtnCallMethod.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
@@ -68,7 +72,6 @@ namespace ZETP.Interface
         {
             try
             {   
-                //TODO: manque les parametres
                 controller.callMethod(LbxMethods.SelectedItem.ToString(), null);
                 WriteOutputConsole("Method Called");
             }
@@ -77,18 +80,6 @@ namespace ZETP.Interface
                 WriteOutputConsole(ex.Message);
             }
         }
-        #endregion
-
-        #region "Methods"
-        /// <summary>
-        /// Display a message in the output console.
-        /// </summary>
-        /// <param name="p"> string to display in the output console </param>
-        private void WriteOutputConsole(string p)
-        {
-            TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
-        }
-        #endregion
 
         private void CbxClass_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -104,5 +95,17 @@ namespace ZETP.Interface
             if (LbxConstructors.Items.Count != 0)
                 BtnCreateObject.Enabled = true;
         }
+        #endregion
+
+        #region "Methods"
+        /// <summary>
+        /// Display a message in the output console.
+        /// </summary>
+        /// <param name="p"> string to display in the output console </param>
+        private void WriteOutputConsole(string p)
+        {
+            TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
+        }
+        #endregion
     }
 }

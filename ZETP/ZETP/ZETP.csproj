@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassForTest.cs" />
+    <Compile Include="Interface\FormConstructorParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\FormConstructorParameters.Designer.cs">
+      <DependentUpon>FormConstructorParameters.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     <Compile Include="Interface\FormMainModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interface\FormConstructorParameters.resx">
+      <DependentUpon>FormConstructorParameters.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
