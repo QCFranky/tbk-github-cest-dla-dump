@@ -27,7 +27,7 @@ namespace ZETP.Interface
 
                 MethodInfo[] classInfo = classType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
                 foreach (MethodInfo info in classInfo)
-                    model.CLASS_METHODS.Add(info.Name);
+                    model.CLASS_METHODS.Add(info.ToString());
             }
         }
 
