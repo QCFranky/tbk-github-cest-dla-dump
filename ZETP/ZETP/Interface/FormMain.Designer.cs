@@ -77,14 +77,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1084, 544);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 546);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // LblOutpout
             // 
             this.LblOutpout.AutoSize = true;
             this.LblOutpout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LblOutpout.Location = new System.Drawing.Point(794, 6);
+            this.LblOutpout.Location = new System.Drawing.Point(618, 6);
             this.LblOutpout.Margin = new System.Windows.Forms.Padding(10, 6, 3, 0);
             this.LblOutpout.Name = "LblOutpout";
             this.LblOutpout.Size = new System.Drawing.Size(287, 18);
@@ -112,7 +112,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 51);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(75, 232);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(75, 233);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // LblConstructors
@@ -146,9 +146,9 @@
             this.flowLayoutPanel2.Controls.Add(this.BtnCallMethod);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 289);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 290);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(75, 232);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(75, 233);
             this.flowLayoutPanel2.TabIndex = 11;
             // 
             // LblMethods
@@ -180,12 +180,12 @@
             this.TbxOutpoutConsole.BackColor = System.Drawing.Color.White;
             this.TbxOutpoutConsole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TbxOutpoutConsole.Enabled = false;
-            this.TbxOutpoutConsole.Location = new System.Drawing.Point(794, 27);
+            this.TbxOutpoutConsole.Location = new System.Drawing.Point(618, 27);
             this.TbxOutpoutConsole.Margin = new System.Windows.Forms.Padding(10, 3, 10, 10);
             this.TbxOutpoutConsole.Multiline = true;
             this.TbxOutpoutConsole.Name = "TbxOutpoutConsole";
             this.tableLayoutPanel1.SetRowSpan(this.TbxOutpoutConsole, 4);
-            this.TbxOutpoutConsole.Size = new System.Drawing.Size(280, 507);
+            this.TbxOutpoutConsole.Size = new System.Drawing.Size(280, 509);
             this.TbxOutpoutConsole.TabIndex = 8;
             this.TbxOutpoutConsole.Text = "---------------------------------------------------------------------------------" +
     "--------";
@@ -217,23 +217,23 @@
             this.LbxConstructors.FormattingEnabled = true;
             this.LbxConstructors.Location = new System.Drawing.Point(84, 51);
             this.LbxConstructors.Name = "LbxConstructors";
-            this.LbxConstructors.Size = new System.Drawing.Size(697, 232);
+            this.LbxConstructors.Size = new System.Drawing.Size(521, 233);
             this.LbxConstructors.TabIndex = 13;
             // 
             // LbxMethods
             // 
             this.LbxMethods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LbxMethods.FormattingEnabled = true;
-            this.LbxMethods.Location = new System.Drawing.Point(84, 289);
+            this.LbxMethods.Location = new System.Drawing.Point(84, 290);
             this.LbxMethods.Name = "LbxMethods";
-            this.LbxMethods.Size = new System.Drawing.Size(697, 232);
+            this.LbxMethods.Size = new System.Drawing.Size(521, 233);
             this.LbxMethods.TabIndex = 14;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 544);
+            this.ClientSize = new System.Drawing.Size(908, 546);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(538, 307);
