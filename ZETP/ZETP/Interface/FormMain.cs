@@ -55,12 +55,12 @@ namespace ZETP.Interface
 
                 if (zeForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    controller.callConstructor(LbxConstructors.SelectedIndex, null);
-                    WriteOutputConsole("Object Created");
+                controller.callConstructor(LbxConstructors.SelectedIndex, null);
+                WriteOutputConsole("Object Created");
 
-                    if (LbxMethods.Items.Count != 0)
-                        BtnCallMethod.Enabled = true;
-                }
+                if (LbxMethods.Items.Count != 0)
+                    BtnCallMethod.Enabled = true;
+            }
             }
             catch (Exception ex)
             {
@@ -72,6 +72,7 @@ namespace ZETP.Interface
         {
             try
             {   
+                //TODO: manque les parametres
                 controller.callMethod(LbxMethods.SelectedItem.ToString(), null);
                 WriteOutputConsole("Method Called");
             }
