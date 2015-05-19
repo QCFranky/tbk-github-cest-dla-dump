@@ -12,6 +12,11 @@ namespace ZETP
         float f;
         String s;
 
+        public ClassForTest(int i)
+        {
+            this.i = i;
+        }
+
         public ClassForTest(int i = 0, float f = 0.0f, String s = "")
         {
             this.i = i;

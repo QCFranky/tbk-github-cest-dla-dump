@@ -37,8 +37,11 @@ namespace ZETP.Interface
                     WriteOutputConsole(aClass.Name);
                 }
             }
-
-            controller.analyseClass(CbxClass.SelectedText);
+            String text = CbxClass.SelectedText;
+            if (text != null && !text.Equals(""))
+            {
+                controller.analyseClass(text);
+            }
 
             if (LbxConstructors.Items.Count != 0)
                 BtnCreateObject.Enabled = true;
@@ -48,9 +51,8 @@ namespace ZETP.Interface
         {
             try
             {
-                //TODO: a verifier si la methode callMethode marche pour es constructeur aussi
                 //TODO: manque les parametres
-                //controller.callMethod()
+                controller.callConstructor(LbxConstructors.SelectedIndex, null);
                 WriteOutputConsole("Object Created");
 
                 if (LbxMethods.Items.Count != 0)
@@ -67,7 +69,7 @@ namespace ZETP.Interface
             try
             {   
                 //TODO: manque les parametres
-                //controller.callMethod()
+                controller.callMethod(LbxMethods.SelectedItem.ToString(), null);
                 WriteOutputConsole("Method Called");
             }
             catch (Exception ex)
@@ -87,5 +89,20 @@ namespace ZETP.Interface
             TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
         }
         #endregion
+
+        private void CbxClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String text = CbxClass.SelectedItem.ToString();
+            if (text != null && !text.Equals(""))
+            {
+                controller.analyseClass(text);
+            }
+
+            LbxConstructors.Items.AddRange(model.CLASS_CONSTRUCTORS.ToArray());
+            LbxMethods.Items.AddRange(model.CLASS_METHODS.ToArray());
+
+            if (LbxConstructors.Items.Count != 0)
+                BtnCreateObject.Enabled = true;
+        }
     }
 }

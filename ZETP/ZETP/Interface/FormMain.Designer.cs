@@ -209,6 +209,7 @@
             this.CbxClass.Name = "CbxClass";
             this.CbxClass.Size = new System.Drawing.Size(251, 21);
             this.CbxClass.TabIndex = 12;
+            this.CbxClass.SelectedIndexChanged += new System.EventHandler(this.CbxClass_SelectedIndexChanged);
             // 
             // LbxConstructors
             // 
