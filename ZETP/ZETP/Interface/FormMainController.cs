@@ -17,15 +17,15 @@ namespace ZETP.Interface
 
         public void analyseClass(String className)
         {
-            Type classType = getClassFromName(className);
-            if (classType != null)
+            model.CURRENT_CLASS = getClassFromName(className);
+            if (model.CURRENT_CLASS != null)
             {
                 model.clearData();
-                ConstructorInfo[] constructorsInfo = classType.GetConstructors();
+                ConstructorInfo[] constructorsInfo = model.CURRENT_CLASS.GetConstructors();
                 foreach (ConstructorInfo info in constructorsInfo)
                     model.CLASS_CONSTRUCTORS.Add(info.ToString().Replace(info.Name, className).Remove(0,5));
 
-                MethodInfo[] classInfo = classType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+                MethodInfo[] classInfo = model.CURRENT_CLASS.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
                 foreach (MethodInfo info in classInfo)
                     model.CLASS_METHODS.Add(info.ToString());
             }
