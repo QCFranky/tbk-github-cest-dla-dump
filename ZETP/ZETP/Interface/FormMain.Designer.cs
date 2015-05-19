@@ -78,7 +78,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(908, 546);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // LblOutpout
             // 
@@ -99,7 +99,7 @@
             this.LblClassName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
             this.LblClassName.Name = "LblClassName";
             this.LblClassName.Size = new System.Drawing.Size(75, 18);
-            this.LblClassName.TabIndex = 2;
+            this.LblClassName.TabIndex = 0;
             this.LblClassName.Text = "Class Name:";
             this.LblClassName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -113,7 +113,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 51);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(75, 233);
-            this.flowLayoutPanel1.TabIndex = 10;
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
             // LblConstructors
             // 
@@ -134,7 +134,7 @@
             this.BtnCreateObject.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.BtnCreateObject.Name = "BtnCreateObject";
             this.BtnCreateObject.Size = new System.Drawing.Size(69, 42);
-            this.BtnCreateObject.TabIndex = 5;
+            this.BtnCreateObject.TabIndex = 0;
             this.BtnCreateObject.Text = "Create Object";
             this.BtnCreateObject.UseVisualStyleBackColor = true;
             this.BtnCreateObject.Click += new System.EventHandler(this.BtnCreateObject_Click);
@@ -170,7 +170,7 @@
             this.BtnCallMethod.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.BtnCallMethod.Name = "BtnCallMethod";
             this.BtnCallMethod.Size = new System.Drawing.Size(69, 42);
-            this.BtnCallMethod.TabIndex = 6;
+            this.BtnCallMethod.TabIndex = 0;
             this.BtnCallMethod.Text = "Call Method";
             this.BtnCallMethod.UseVisualStyleBackColor = true;
             this.BtnCallMethod.Click += new System.EventHandler(this.BtnCallMethod_Click);
@@ -208,7 +208,7 @@
             this.CbxClass.Location = new System.Drawing.Point(84, 27);
             this.CbxClass.Name = "CbxClass";
             this.CbxClass.Size = new System.Drawing.Size(251, 21);
-            this.CbxClass.TabIndex = 12;
+            this.CbxClass.TabIndex = 1;
             this.CbxClass.SelectedIndexChanged += new System.EventHandler(this.CbxClass_SelectedIndexChanged);
             // 
             // LbxConstructors
@@ -218,7 +218,7 @@
             this.LbxConstructors.Location = new System.Drawing.Point(84, 51);
             this.LbxConstructors.Name = "LbxConstructors";
             this.LbxConstructors.Size = new System.Drawing.Size(521, 233);
-            this.LbxConstructors.TabIndex = 13;
+            this.LbxConstructors.TabIndex = 3;
             // 
             // LbxMethods
             // 
@@ -227,7 +227,7 @@
             this.LbxMethods.Location = new System.Drawing.Point(84, 290);
             this.LbxMethods.Name = "LbxMethods";
             this.LbxMethods.Size = new System.Drawing.Size(521, 233);
-            this.LbxMethods.TabIndex = 14;
+            this.LbxMethods.TabIndex = 4;
             // 
             // FormMain
             // 
