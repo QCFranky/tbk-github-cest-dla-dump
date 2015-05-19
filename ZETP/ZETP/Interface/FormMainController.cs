@@ -70,21 +70,27 @@ namespace ZETP.Interface
             }
         }
 
-        public void callMethod(String methodName, Object[] param)
+        public void callMethod(int index, Object[] param)
         {
             Type aClass = model.CURRENT_CLASS;
             if (aClass == null)
                 throw new Exception("No class has been selected.");
-            MethodInfo aMethod = aClass.GetMethod(methodName);
-            if (aMethod == null)
-                throw new Exception("No method of that name was found.");
-            object result = null;
-            ParameterInfo[] parameters = aMethod.GetParameters();
-            object classInstance = Activator.CreateInstance(aClass, null);
-            if (parameters.Length == 0)
-                result = aMethod.Invoke(classInstance, null);
+            MethodInfo[] methods = aClass.GetMethods();
+            if (index >= 0 && index < methods.Length)
+            {
+                MethodInfo aMethod = methods[index];
+                object result = null;
+                ParameterInfo[] parameters = aMethod.GetParameters();
+                object classInstance = Activator.CreateInstance(aClass, null);
+                if (parameters.Length == 0)
+                    result = aMethod.Invoke(classInstance, null);
+                else
+                    result = aMethod.Invoke(aMethod, param);
+            }
             else
-                result = aMethod.Invoke(aMethod, param);
+            {
+                throw new Exception("Invalide Index.");
+            }
         }
     }
 }
