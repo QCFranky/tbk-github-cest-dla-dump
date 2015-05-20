@@ -55,7 +55,7 @@ namespace ZETP.Interface
 
                 if (zeForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    controller.callConstructor(LbxConstructors.SelectedIndex, zeForm.getValues());
+                    controller.callConstructor(LbxConstructors.SelectedIndex, zeForm != null ? zeForm.getValues() : null);
                     WriteOutputConsole("Object Created");
 
                     if (LbxMethods.Items.Count != 0)
