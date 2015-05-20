@@ -13,12 +13,14 @@ namespace ZETP.Interface
 {
     partial class FormConstructorParameters : Form
     {
+        private List<String> parametersType = new List<String>();
+        private List<Object> values = new List<Object>();
         public FormConstructorParameters(ParameterInfo[] parameters)
         {
             InitializeComponent();
 
             foreach (ParameterInfo parameter in parameters)
-                parameter.GetType();
+               parametersType.Add(parameter.ParameterType.Name);
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
@@ -66,5 +68,23 @@ namespace ZETP.Interface
 
         }
 
+        private bool validateValue(String type,String s)
+        {
+            try
+            {
+                switch (type)
+                {
+                    case "Int32":
+                        values.Add(Int32.Parse(s));
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
