@@ -50,6 +50,7 @@ namespace ZETP.Interface
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
+            values = new List<object>();
             ValidateChildren();
 
             if (string.IsNullOrEmpty(errorProvider.GetError(TbxParameter1)) &&
