@@ -51,7 +51,11 @@ namespace ZETP.Interface
         {
             ValidateChildren();
 
-            if (string.IsNullOrEmpty(errorProvider.GetError(TbxParameter1)))
+            if (string.IsNullOrEmpty(errorProvider.GetError(TbxParameter1)) &&
+                string.IsNullOrEmpty(errorProvider.GetError(TbxParameter2)) &&
+                string.IsNullOrEmpty(errorProvider.GetError(TbxParameter3)) &&
+                string.IsNullOrEmpty(errorProvider.GetError(TbxParameter4)) &&
+                string.IsNullOrEmpty(errorProvider.GetError(TbxParameter5)))
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
