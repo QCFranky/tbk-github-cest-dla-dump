@@ -64,13 +64,16 @@ namespace ZETP.Interface
             String tbxName = tbx.Name;
             int index = Int32.Parse(tbxName.Substring(tbxName.Length - 1)) - 1;
 
-            if (validateValue(parametersType[index], tbx.Text))
+            if (String.IsNullOrEmpty(tbx.Text))
+            {
+                errorProvider.SetError(tbx, "Value is mandatory.");
+            }
+            else if (validateValue(parametersType[index], tbx.Text))
             {
                 errorProvider.SetError(tbx, String.Empty);
             }
             else
             {
-                // Set the error if the name is not valid.
                 errorProvider.SetError(tbx, "Wrong type.");
             }
         }
