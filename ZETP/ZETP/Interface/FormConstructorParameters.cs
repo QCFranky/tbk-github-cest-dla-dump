@@ -36,7 +36,10 @@ namespace ZETP.Interface
             }
 
             foreach (ParameterInfo parameter in parameters)
+            {
                 parametersType.Add(parameter.ParameterType.Name);
+                values.Add(null);
+            }
         }
 
         private void FormConstructorParameters_Load(object sender, EventArgs e)
@@ -50,7 +53,6 @@ namespace ZETP.Interface
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
-            values = new List<object>();
             ValidateChildren();
 
             if (string.IsNullOrEmpty(errorProvider.GetError(TbxParameter1)) &&
@@ -76,7 +78,7 @@ namespace ZETP.Interface
                 {
                     errorProvider.SetError(tbx, "Value is mandatory.");
                 }
-                else if (validateValue(parametersType[index], tbx.Text))
+                else if (validateValue(parametersType[index], tbx.Text, index))
                 {
                     errorProvider.SetError(tbx, String.Empty);
                 }
@@ -92,41 +94,41 @@ namespace ZETP.Interface
             return this.values.ToArray<object>();
         }
 
-        private bool validateValue(String type, String s)
+        private bool validateValue(String type, String s, int index)
         {
             try
             {
                 switch (type)
                 {
                     case "Boolean":     //bool
-                        values.Add(Boolean.Parse(s));
+                        values[index] = Boolean.Parse(s);
                         return true;
                     case "Byte":        //Byte
-                        values.Add(Byte.Parse(s));
+                        values[index] = Byte.Parse(s);
                         return true;
                     case "DateTime":    //DateTime
-                        values.Add(DateTime.Parse(s));
+                        values[index] = DateTime.Parse(s);
                         return true;
                     case "Int16":       //short
-                        values.Add(Int16.Parse(s));
+                        values[index] = Int16.Parse(s);
                         return true;
                     case "Int32":       //int
-                        values.Add(Int32.Parse(s));
+                        values[index] = Int32.Parse(s);
                         return true;
                     case "Int64":       //long
-                        values.Add(Int64.Parse(s));
+                        values[index] = Int64.Parse(s);
                         return true;
                     case "Single":      //float
-                        values.Add(Single.Parse(s));
+                        values[index] = Single.Parse(s);
                         return true;
                     case "String":      //string
-                        values.Add(s);
+                        values[index] = s;
                         return true;
                     default:
                         return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
