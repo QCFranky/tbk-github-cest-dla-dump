@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ZETP.Interface
 {
-    public partial class FormMethodParameters : Form
+    partial class FormMethodParameters : Form
     {
         public FormMethodParameters()
         {
