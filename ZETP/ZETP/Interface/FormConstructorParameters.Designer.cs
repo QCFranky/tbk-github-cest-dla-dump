@@ -51,6 +51,8 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -67,14 +69,14 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(368, 164);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(368, 154);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // TbxParameter5
@@ -86,6 +88,7 @@
             this.TbxParameter5.Name = "TbxParameter5";
             this.TbxParameter5.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter5.TabIndex = 9;
+            this.TbxParameter5.Visible = false;
             this.TbxParameter5.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter5_Validating);
             // 
             // TbxParameter4
@@ -97,6 +100,7 @@
             this.TbxParameter4.Name = "TbxParameter4";
             this.TbxParameter4.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter4.TabIndex = 8;
+            this.TbxParameter4.Visible = false;
             this.TbxParameter4.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter4_Validating);
             // 
             // TbxParameter3
@@ -108,6 +112,7 @@
             this.TbxParameter3.Name = "TbxParameter3";
             this.TbxParameter3.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter3.TabIndex = 7;
+            this.TbxParameter3.Visible = false;
             this.TbxParameter3.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter3_Validating);
             // 
             // TbxParameter2
@@ -119,6 +124,7 @@
             this.TbxParameter2.Name = "TbxParameter2";
             this.TbxParameter2.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter2.TabIndex = 6;
+            this.TbxParameter2.Visible = false;
             this.TbxParameter2.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter2_Validating);
             // 
             // LblParameter1
@@ -132,18 +138,20 @@
             this.LblParameter1.TabIndex = 0;
             this.LblParameter1.Text = "Parameter 1:";
             this.LblParameter1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblParameter1.Visible = false;
             // 
             // LblParameter5
             // 
             this.LblParameter5.AutoSize = true;
             this.LblParameter5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LblParameter5.Location = new System.Drawing.Point(3, 99);
-            this.LblParameter5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.LblParameter5.Location = new System.Drawing.Point(3, 102);
+            this.LblParameter5.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
             this.LblParameter5.Name = "LblParameter5";
-            this.LblParameter5.Size = new System.Drawing.Size(67, 21);
+            this.LblParameter5.Size = new System.Drawing.Size(67, 52);
             this.LblParameter5.TabIndex = 4;
             this.LblParameter5.Text = "Parameter 5:";
-            this.LblParameter5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblParameter5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.LblParameter5.Visible = false;
             // 
             // LblParameter4
             // 
@@ -156,6 +164,7 @@
             this.LblParameter4.TabIndex = 3;
             this.LblParameter4.Text = "Parameter 4:";
             this.LblParameter4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblParameter4.Visible = false;
             // 
             // LblParameter3
             // 
@@ -168,6 +177,7 @@
             this.LblParameter3.TabIndex = 2;
             this.LblParameter3.Text = "Parameter 3:";
             this.LblParameter3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblParameter3.Visible = false;
             // 
             // LblParameter2
             // 
@@ -180,6 +190,7 @@
             this.LblParameter2.TabIndex = 1;
             this.LblParameter2.Text = "Parameter 2:";
             this.LblParameter2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblParameter2.Visible = false;
             // 
             // TbxParameter1
             // 
@@ -190,6 +201,7 @@
             this.TbxParameter1.Name = "TbxParameter1";
             this.TbxParameter1.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter1.TabIndex = 5;
+            this.TbxParameter1.Visible = false;
             this.TbxParameter1.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter1_Validating);
             // 
             // flowLayoutPanel1
@@ -197,7 +209,7 @@
             this.flowLayoutPanel1.Controls.Add(this.BtnCancel);
             this.flowLayoutPanel1.Controls.Add(this.BtnOk);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 143);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 133);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.flowLayoutPanel1.Size = new System.Drawing.Size(368, 31);
@@ -232,8 +244,10 @@
             this.AcceptButton = this.BtnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.BtnCancel;
-            this.ClientSize = new System.Drawing.Size(388, 184);
+            this.ClientSize = new System.Drawing.Size(388, 174);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -245,11 +259,13 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Constructor Parameters";
+            this.Load += new System.EventHandler(this.FormConstructorParameters_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
