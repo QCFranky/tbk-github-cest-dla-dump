@@ -30,6 +30,7 @@ namespace ZETP.Interface
 
             if (ParametersLength == 0)
             {
+                values = null;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -83,6 +84,11 @@ namespace ZETP.Interface
                     errorProvider.SetError(tbx, "Wrong type.");
                 }
             }
+        }
+
+        public object[] getValues()
+        {
+            return this.values.ToArray<object>();
         }
 
         private bool validateValue(String type, String s)

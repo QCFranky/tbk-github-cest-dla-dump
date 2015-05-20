@@ -44,7 +44,7 @@ namespace ZETP.Interface
             return null;
         }
 
-        public Object callConstructor(int index, Object[] param)
+        public void callConstructor(int index, Object[] param)
         {
             Type aClass = model.CURRENT_CLASS;
             if (aClass == null)
@@ -56,14 +56,12 @@ namespace ZETP.Interface
                 if (aConstructor == null)
                     throw new Exception("Unable to call the constructor.");
 
-                Object result = null;
                 ParameterInfo[] parameters = aConstructor.GetParameters();
                 object classInstance = Activator.CreateInstance(aClass, null);
                 if (parameters.Length == 0)
-                    result = aConstructor.Invoke(classInstance, null);
+                    aConstructor.Invoke(classInstance, null);
                 else
-                    result = aConstructor.Invoke(aConstructor, param);
-                return result;
+                    aConstructor.Invoke(aConstructor, param);
             }
             else
             {

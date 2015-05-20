@@ -55,7 +55,7 @@ namespace ZETP.Interface
 
                 if (zeForm.ShowDialog(this) == DialogResult.OK)
                 {
-                    controller.callConstructor(LbxConstructors.SelectedIndex, null);
+                    controller.callConstructor(LbxConstructors.SelectedIndex, zeForm.getValues());
                     WriteOutputConsole("Object Created");
 
                     if (LbxMethods.Items.Count != 0)
@@ -71,10 +71,13 @@ namespace ZETP.Interface
         private void BtnCallMethod_Click(object sender, EventArgs e)
         {
             try
-            {   
-                //TODO: manque les parametres
-                controller.callMethod(LbxMethods.SelectedIndex, null);
-                WriteOutputConsole("Method Called");
+            {
+                FormConstructorParameters zeForm = new FormConstructorParameters(model.CURRENT_CLASS.GetMethods()[LbxConstructors.SelectedIndex].GetParameters());
+                if (zeForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    WriteOutputConsole(controller.callMethod(LbxMethods.SelectedIndex, zeForm.getValues()).ToString());
+                    WriteOutputConsole("Method Called");
+                }
             }
             catch (Exception ex)
             {
