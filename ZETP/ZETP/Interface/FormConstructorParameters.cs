@@ -37,7 +37,7 @@ namespace ZETP.Interface
         private void TbxParameter1_Validating(object sender, CancelEventArgs e)
         {
             //TODO: Vérifier si bon type ...
-            if (true)
+            if (false)
             {
                 errorProvider.SetError(TbxParameter1, String.Empty);
             }

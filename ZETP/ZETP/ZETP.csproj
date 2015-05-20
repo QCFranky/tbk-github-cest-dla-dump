@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassForTest.cs" />
+    <Compile Include="Class\Parameter.cs" />
     <Compile Include="Interface\FormConstructorParameters.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +103,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1431671305_Close.png" />
     <None Include="Resources\1431670061_Open.png" />
