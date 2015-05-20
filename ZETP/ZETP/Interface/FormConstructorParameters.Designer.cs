@@ -86,7 +86,7 @@
             this.TbxParameter5.Name = "TbxParameter5";
             this.TbxParameter5.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter5.TabIndex = 9;
-            this.TbxParameter5.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter5_Validating);
+            this.TbxParameter5.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter_Validating);
             // 
             // TbxParameter4
             // 
@@ -97,7 +97,7 @@
             this.TbxParameter4.Name = "TbxParameter4";
             this.TbxParameter4.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter4.TabIndex = 8;
-            this.TbxParameter4.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter4_Validating);
+            this.TbxParameter4.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter_Validating);
             // 
             // TbxParameter3
             // 
@@ -108,7 +108,7 @@
             this.TbxParameter3.Name = "TbxParameter3";
             this.TbxParameter3.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter3.TabIndex = 7;
-            this.TbxParameter3.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter3_Validating);
+            this.TbxParameter3.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter_Validating);
             // 
             // TbxParameter2
             // 
@@ -119,7 +119,7 @@
             this.TbxParameter2.Name = "TbxParameter2";
             this.TbxParameter2.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter2.TabIndex = 6;
-            this.TbxParameter2.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter2_Validating);
+            this.TbxParameter2.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter_Validating);
             // 
             // LblParameter1
             // 
@@ -190,7 +190,7 @@
             this.TbxParameter1.Name = "TbxParameter1";
             this.TbxParameter1.Size = new System.Drawing.Size(272, 20);
             this.TbxParameter1.TabIndex = 5;
-            this.TbxParameter1.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter1_Validating);
+            this.TbxParameter1.Validating += new System.ComponentModel.CancelEventHandler(this.TbxParameter_Validating);
             // 
             // flowLayoutPanel1
             // 

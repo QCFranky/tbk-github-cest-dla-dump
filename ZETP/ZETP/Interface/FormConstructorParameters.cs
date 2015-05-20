@@ -20,7 +20,7 @@ namespace ZETP.Interface
             InitializeComponent();
 
             foreach (ParameterInfo parameter in parameters)
-               parametersType.Add(parameter.ParameterType.Name);
+                parametersType.Add(parameter.ParameterType.Name);
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
@@ -34,48 +34,52 @@ namespace ZETP.Interface
             }
         }
 
-        private void TbxParameter1_Validating(object sender, CancelEventArgs e)
+        private void TbxParameter_Validating(object sender, CancelEventArgs e)
         {
-            //TODO: Vérifier si bon type ...
-            if (false)
+            TextBox tbx = sender as TextBox;
+            String tbxName = tbx.Name;
+            int index = Int32.Parse(tbxName.Substring(tbxName.Length - 1)) - 1;
+
+            if (validateValue(parametersType[index], tbx.Text))
             {
-                errorProvider.SetError(TbxParameter1, String.Empty);
+                errorProvider.SetError(tbx, String.Empty);
             }
             else
             {
                 // Set the error if the name is not valid.
-                errorProvider.SetError(TbxParameter1, "Wrong type.");
+                errorProvider.SetError(tbx, "Wrong type.");
             }
         }
 
-        private void TbxParameter2_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void TbxParameter3_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void TbxParameter4_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void TbxParameter5_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private bool validateValue(String type,String s)
+        private bool validateValue(String type, String s)
         {
             try
             {
                 switch (type)
                 {
-                    case "Int32":
+                    case "Boolean":     //bool
+                        values.Add(Boolean.Parse(s));
+                        return true;
+                    case "Byte":        //Byte
+                        values.Add(Byte.Parse(s));
+                        return true;
+                    case "DateTime":    //DateTime
+                        values.Add(DateTime.Parse(s));
+                        return true;
+                    case "Int16":       //short
+                        values.Add(Int16.Parse(s));
+                        return true;
+                    case "Int32":       //int
                         values.Add(Int32.Parse(s));
+                        return true;
+                    case "Int64":       //long
+                        values.Add(Int64.Parse(s));
+                        return true;
+                    case "Single":      //float
+                        values.Add(Single.Parse(s));
+                        return true;
+                    case "String":      //string
+                        values.Add(s);
                         return true;
                     default:
                         return false;
