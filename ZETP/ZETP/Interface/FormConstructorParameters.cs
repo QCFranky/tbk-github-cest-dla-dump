@@ -28,13 +28,6 @@ namespace ZETP.Interface
 
             ParametersLength = parameters.Length;
 
-            if (ParametersLength == 0)
-            {
-                values = null;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-
             foreach (ParameterInfo parameter in parameters)
             {
                 parametersType.Add(parameter.ParameterType.Name);
@@ -44,6 +37,12 @@ namespace ZETP.Interface
 
         private void FormConstructorParameters_Load(object sender, EventArgs e)
         {
+            if (ParametersLength == 0)
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+
             for (int i = 0; i < ParametersLength; ++i)
             {
                 TbxArray[i].Visible = true;
