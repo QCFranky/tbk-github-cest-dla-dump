@@ -51,7 +51,7 @@ namespace ZETP.Interface
         {
             try
             {
-                FormConstructorParameters zeForm = new FormConstructorParameters(model.CURRENT_CLASS.GetConstructors()[LbxConstructors.SelectedIndex].GetParameters());
+                FormConstructorParameters zeForm = new FormConstructorParameters();
 
                 if (zeForm.ShowDialog(this) == DialogResult.OK)
                 {
@@ -60,7 +60,6 @@ namespace ZETP.Interface
 
                 if (LbxMethods.Items.Count != 0)
                     BtnCallMethod.Enabled = true;
-            }
             }
             catch (Exception ex)
             {
@@ -72,8 +71,8 @@ namespace ZETP.Interface
         {
             try
             {   
- 
-                controller.callMethod(LbxMethods.SelectedIndex, null);
+                //TODO: manque les parametres
+                controller.callMethod(LbxMethods.SelectedItem.ToString(), null);
                 WriteOutputConsole("Method Called");
             }
             catch (Exception ex)
@@ -81,6 +80,18 @@ namespace ZETP.Interface
                 WriteOutputConsole(ex.Message);
             }
         }
+        #endregion
+
+        #region "Methods"
+        /// <summary>
+        /// Display a message in the output console.
+        /// </summary>
+        /// <param name="p"> string to display in the output console </param>
+        private void WriteOutputConsole(string p)
+        {
+            TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
+        }
+        #endregion
 
         private void CbxClass_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -96,17 +107,5 @@ namespace ZETP.Interface
             if (LbxConstructors.Items.Count != 0)
                 BtnCreateObject.Enabled = true;
         }
-        #endregion
-
-        #region "Methods"
-        /// <summary>
-        /// Display a message in the output console.
-        /// </summary>
-        /// <param name="p"> string to display in the output console </param>
-        private void WriteOutputConsole(string p)
-        {
-            TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
-        }
-        #endregion
     }
 }

@@ -25,7 +25,11 @@ namespace ZETP.Interface
         {
             ValidateChildren();
 
-
+            if (string.IsNullOrEmpty(errorProvider.GetError(TbxParameter1)))
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void TbxParameter1_Validating(object sender, CancelEventArgs e)
