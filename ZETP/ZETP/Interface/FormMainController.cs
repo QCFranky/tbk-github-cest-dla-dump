@@ -57,11 +57,11 @@ namespace ZETP.Interface
                     throw new Exception("Unable to call the constructor.");
 
                 ParameterInfo[] parameters = aConstructor.GetParameters();
-                object classInstance = Activator.CreateInstance(aClass, null);
+                object classInstance = Activator.CreateInstance(aClass, param);
                 if (parameters.Length == 0)
                     aConstructor.Invoke(classInstance, null);
                 else
-                    aConstructor.Invoke(aConstructor, param);
+                    aConstructor.Invoke(classInstance, param);
             }
             else
             {
@@ -80,11 +80,11 @@ namespace ZETP.Interface
                 MethodInfo aMethod = methods[index];
                 object result = null;
                 ParameterInfo[] parameters = aMethod.GetParameters();
-                object classInstance = Activator.CreateInstance(aClass, null);
+                object classInstance = Activator.CreateInstance(aClass, param);
                 if (parameters.Length == 0)
                     result = aMethod.Invoke(classInstance, null);
                 else
-                    result = aMethod.Invoke(aMethod, param);
+                    result = aMethod.Invoke(classInstance, param);
                 return result;
             }
             else
