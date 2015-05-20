@@ -15,12 +15,36 @@ namespace ZETP.Interface
     {
         private List<String> parametersType = new List<String>();
         private List<Object> values = new List<Object>();
+        private int ParametersLength;
+        private Control[] TbxArray;
+        private Control[] LblArray;
+
         public FormConstructorParameters(ParameterInfo[] parameters)
         {
             InitializeComponent();
 
+            TbxArray = new Control[] { TbxParameter1, TbxParameter2, TbxParameter3, TbxParameter4, TbxParameter5 };
+            LblArray = new Control[] { LblParameter1, LblParameter2, LblParameter3, LblParameter4, LblParameter5 };
+
+            ParametersLength = parameters.Length;
+
+            if (ParametersLength == 0)
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+
             foreach (ParameterInfo parameter in parameters)
                 parametersType.Add(parameter.ParameterType.Name);
+        }
+
+        private void FormConstructorParameters_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < ParametersLength; ++i)
+            {
+                TbxArray[i].Visible = true;
+                LblArray[i].Visible = true;
+            }
         }
 
         private void BtnOk_Click(object sender, EventArgs e)
