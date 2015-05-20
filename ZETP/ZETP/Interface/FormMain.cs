@@ -51,7 +51,7 @@ namespace ZETP.Interface
         {
             try
             {
-                FormConstructorParameters zeForm = new FormConstructorParameters(model.CURRENT_CLASS.GetConstructors()[LbxConstructors.SelectedIndex].GetParameters());
+                FormParameters zeForm = new FormParameters(model.CURRENT_CLASS.GetConstructors()[LbxConstructors.SelectedIndex].GetParameters());
 
                 if (zeForm.ShowDialog(this) == DialogResult.OK)
                 {
@@ -72,7 +72,8 @@ namespace ZETP.Interface
         {
             try
             {
-                FormConstructorParameters zeForm = new FormConstructorParameters(model.CURRENT_CLASS.GetMethods()[LbxConstructors.SelectedIndex].GetParameters());
+                FormParameters zeForm = new FormParameters(model.CURRENT_CLASS.GetMethods()[LbxMethods.SelectedIndex].GetParameters());
+
                 if (zeForm.ShowDialog(this) == DialogResult.OK)
                 {
                     WriteOutputConsole(controller.callMethod(LbxMethods.SelectedIndex, zeForm.getValues()).ToString());
@@ -84,18 +85,6 @@ namespace ZETP.Interface
                 WriteOutputConsole(ex.Message);
             }
         }
-        #endregion
-
-        #region "Methods"
-        /// <summary>
-        /// Display a message in the output console.
-        /// </summary>
-        /// <param name="p"> string to display in the output console </param>
-        private void WriteOutputConsole(string p)
-        {
-            TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
-        }
-        #endregion
 
         private void CbxClass_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -111,5 +100,17 @@ namespace ZETP.Interface
             if (LbxConstructors.Items.Count != 0)
                 BtnCreateObject.Enabled = true;
         }
+        #endregion
+
+        #region "Methods"
+        /// <summary>
+        /// Display a message in the output console.
+        /// </summary>
+        /// <param name="p"> string to display in the output console </param>
+        private void WriteOutputConsole(string p)
+        {
+            TbxOutpoutConsole.AppendText(Environment.NewLine + "<" + DateTime.Now + "> : " + p);
+        }
+        #endregion
     }
 }

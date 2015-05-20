@@ -1,6 +1,6 @@
 ﻿namespace ZETP.Interface
 {
-    partial class FormMethodParameters
+    partial class FormParameters
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TbxParameter5 = new System.Windows.Forms.TextBox();
             this.TbxParameter4 = new System.Windows.Forms.TextBox();
@@ -44,16 +43,11 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnOk = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
-            // 
-            // errorProvider
-            // 
-            this.errorProvider.BlinkRate = 0;
-            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider.ContainerControl = this;
             // 
             // tableLayoutPanel1
             // 
@@ -82,8 +76,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(368, 133);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(368, 154);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // TbxParameter5
             // 
@@ -153,7 +147,7 @@
             this.LblParameter5.Location = new System.Drawing.Point(3, 102);
             this.LblParameter5.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
             this.LblParameter5.Name = "LblParameter5";
-            this.LblParameter5.Size = new System.Drawing.Size(67, 31);
+            this.LblParameter5.Size = new System.Drawing.Size(67, 52);
             this.LblParameter5.TabIndex = 4;
             this.LblParameter5.Text = "Parameter 5:";
             this.LblParameter5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -215,11 +209,11 @@
             this.flowLayoutPanel1.Controls.Add(this.BtnCancel);
             this.flowLayoutPanel1.Controls.Add(this.BtnOk);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 143);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 133);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.flowLayoutPanel1.Size = new System.Drawing.Size(368, 31);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // BtnCancel
             // 
@@ -241,26 +235,37 @@
             this.BtnOk.UseVisualStyleBackColor = true;
             this.BtnOk.Click += new System.EventHandler(this.BtnOk_Click);
             // 
-            // FormMethodParameters
+            // errorProvider
             // 
+            this.errorProvider.BlinkRate = 0;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
+            // FormParameters
+            // 
+            this.AcceptButton = this.BtnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 184);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CancelButton = this.BtnCancel;
+            this.ClientSize = new System.Drawing.Size(388, 174);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormMethodParameters";
+            this.Name = "FormParameters";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Methods Parameters";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            this.Text = "Constructor Parameters";
+            this.Load += new System.EventHandler(this.FormConstructorParameters_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,21 +273,20 @@
 
         #endregion
 
-        private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox TbxParameter5;
-        private System.Windows.Forms.TextBox TbxParameter4;
-        private System.Windows.Forms.TextBox TbxParameter3;
-        private System.Windows.Forms.TextBox TbxParameter2;
         private System.Windows.Forms.Label LblParameter1;
         private System.Windows.Forms.Label LblParameter5;
         private System.Windows.Forms.Label LblParameter4;
         private System.Windows.Forms.Label LblParameter3;
         private System.Windows.Forms.Label LblParameter2;
-        private System.Windows.Forms.TextBox TbxParameter1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Button BtnOk;
-
+        private System.Windows.Forms.TextBox TbxParameter5;
+        private System.Windows.Forms.TextBox TbxParameter4;
+        private System.Windows.Forms.TextBox TbxParameter3;
+        private System.Windows.Forms.TextBox TbxParameter2;
+        private System.Windows.Forms.TextBox TbxParameter1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

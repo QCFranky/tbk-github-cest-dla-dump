@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ZETP.Interface
 {
-    partial class FormMethodParameters : Form
+    partial class FormParameters : Form
     {
         private List<String> parametersType = new List<String>();
         private List<Object> values = new List<Object>();
@@ -19,7 +19,7 @@ namespace ZETP.Interface
         private Control[] TbxArray;
         private Control[] LblArray;
 
-        public FormMethodParameters(ParameterInfo[] parameters)
+        public FormParameters(ParameterInfo[] parameters)
         {
             InitializeComponent();
 

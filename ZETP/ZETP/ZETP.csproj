@@ -47,12 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassForTest.cs" />
-    <Compile Include="Interface\FormConstructorParameters.cs">
+    <Compile Include="Class\ClassForTest.cs" />
+    <Compile Include="Interface\FormParameters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\FormConstructorParameters.Designer.cs">
-      <DependentUpon>FormConstructorParameters.cs</DependentUpon>
+    <Compile Include="Interface\FormParameters.Designer.cs">
+      <DependentUpon>FormParameters.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\FormMain.cs">
       <SubType>Form</SubType>
@@ -60,24 +60,15 @@
     <Compile Include="Interface\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\FormMainController.cs" />
-    <Compile Include="Interface\FormMainModel.cs" />
-    <Compile Include="Interface\FormMethodParameters.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\FormMethodParameters.Designer.cs">
-      <DependentUpon>FormMethodParameters.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Class\FormMainController.cs" />
+    <Compile Include="Class\FormMainModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Interface\FormConstructorParameters.resx">
-      <DependentUpon>FormConstructorParameters.cs</DependentUpon>
+    <EmbeddedResource Include="Interface\FormParameters.resx">
+      <DependentUpon>FormParameters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\FormMethodParameters.resx">
-      <DependentUpon>FormMethodParameters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +80,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Class\ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,9 +94,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1431671305_Close.png" />
     <None Include="Resources\1431670061_Open.png" />
